@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM httpd
 RUN rm index.html
 EXPOSE 80
 WORKDIR /var/www/html/
