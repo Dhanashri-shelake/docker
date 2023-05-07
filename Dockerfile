@@ -1,6 +1,6 @@
-FROM httpd
+FROM nginx
 EXPOSE 80
-WORKDIR /var/www/html/
+WORKDIR /usr/share/nginx/html/
 RUN touch index.html
 RUN echo "this is nginx page from ubuntu " > index.html
-CMD ["httpd", "-d", "foreground;"]
+CMD ["nginx", "-g", "demonoff;"]
